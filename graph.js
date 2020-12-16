@@ -1,19 +1,33 @@
 window.onload = function () {
     // set the dimensions and margins of the graph
     var margin = {top: 10, right: 30, bottom: 30, left: 40},
-    width = 400 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    width = 700 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
-    var svg = d3.select("#graphCanvas")
-    // .append("svg")
+    var svg = d3.select("#graphs")
+    .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.json("https://gkarray.github.io/signed_networks_datastory/data.json", function( data) {
+    data = {
+        "nodes":[
+            {"id" : 0},
+            {"id" : 1},
+            {"id" : 2}
+        ],
+        "links":[
+            {"source":0,"target":1,"sign":1},
+            {"source":2,"target":1,"sign":-1},
+            {"source":0,"target":2,"sign":1},
+        ]
+    }
+              
+
+    d3.json("https://gkarray.github.io/signed_networks_datastory/data.json", function(data) {
 
     // Initialize the links
     var link = svg
@@ -29,7 +43,7 @@ window.onload = function () {
         .data(data.nodes)
         .enter()
         .append("circle")
-        .attr("r", 20)
+        .attr("r", 2)
         .style("fill", "#69b3a2")
 
     // Let's list the force we wanna apply on the network

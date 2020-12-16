@@ -1,5 +1,3 @@
-document.load()
-
 data = {
     "nodes": [
         {"id": 1},

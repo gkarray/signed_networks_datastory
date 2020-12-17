@@ -46,6 +46,9 @@ window.onload = function () {
         .attr("r", 2)
         .style("fill", "#69b3a2")
 
+
+    console.log("entering algorithm computation ...")
+
     // Let's list the force we wanna apply on the network
     var simulation = d3.forceSimulation(data.nodes)                 // Force algorithm is applied to data.nodes
         .force("link", d3.forceLink()                               // This force provides links between nodes
@@ -67,6 +70,8 @@ window.onload = function () {
         node
             .attr("cx", function (d) { return d.x+6; })
             .attr("cy", function(d) { return d.y-6; });
+
+        console.log("one tick completed")
     }
 
     });

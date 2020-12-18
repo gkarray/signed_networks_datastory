@@ -3,12 +3,11 @@
 <title>Signed Networks Datastory</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.1.0.min.js"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.1.0.min.js"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.1.0.min.js"
-        crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.js" integrity="sha384-T2yuo9Oe71Cz/I4X9Ac5+gpEa5a8PpJCDlqKYO0CfAuEszu1JrXLl8YugMqYe3sM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.3.min.js" integrity="sha384-98GDGJ0kOMCUMUePhksaQ/GYgB3+NH9h996V88sh3aOiUNX3N+fLXAtry6xctSZ6" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <link href="demo.css" rel="stylesheet">
@@ -37,8 +36,8 @@ body, html {
   crossorigin="anonymous"
   ></script>
   <script>
-            $.get(
-        "https://gkarray.github.io/signed_networks_datastory/embedabble_demo.json",
+      $.getJSON(
+        "https://gkarray.github.io/signed_networks_datastory/embeddable_demo.jsonn",
         function (data) {
             Bokeh.embed.embed_item(data)
         }

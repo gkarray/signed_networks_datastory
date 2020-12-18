@@ -8,6 +8,10 @@ var edges_dict_wikipedia = {}
 
 var nodes_dict_wikipedia = {}
 
+function isEmpty(obj) {
+    return Object.keys(obj).length === 0;
+}
+
 var date_idx_reddit = 0
 
 var simulation_in_progress_reddit = false

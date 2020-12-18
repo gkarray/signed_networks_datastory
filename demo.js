@@ -4,7 +4,7 @@ var simulation_in_progress = false
 
 var nb_clicks = 0
 
-var dates = [
+var dates_arr = [
     "2004/03/28",
     "2004/03/29",
     "2004/03/30",

@@ -1,14 +1,24 @@
-var date_idx = 0
+var date_idx_wikipedia = 0
 
-var simulation_in_progress = false
+var simulation_in_progress_wikipedia = false
 
-var nb_clicks = 0
+var nb_clicks_wikipedia = 0
 
-var edges_dict = null
+var edges_dict_wikipedia = {}
 
-var nodes_dict = null
+var nodes_dict_wikipedia = {}
 
-var dates_arr = [
+var date_idx_reddit = 0
+
+var simulation_in_progress_reddit = false
+
+var nb_clicks_reddit = 0
+
+var edges_dict_reddit = {}
+
+var nodes_dict_reddit = {}
+
+var dates_arr_wikipedia = [
     "2004/03/28",
     "2004/03/29",
     "2004/03/30",

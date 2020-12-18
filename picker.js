@@ -1,16 +1,30 @@
-var outgoing = false
+var outgoing_wikipedia = false
 
-var ingoing = false
+var ingoing_wikipedia = false
 
-var selected_prime_node = []
+var selected_prime_node_wikipedia = []
 
-var selected_non_prime_outgoing = []
+var selected_non_prime_outgoing_wikipedia = []
 
-var selected_non_prime_ingoing = []
+var selected_non_prime_ingoing_wikipedia = []
 
-var selected_edges_outgoing = []
+var selected_edges_outgoing_wikipedia = []
 
-var selected_edges_ingoing = []
+var selected_edges_ingoing_wikipedia = []
+
+var outgoing_reddit = false
+
+var ingoing_reddit = false
+
+var selected_prime_node_reddit = []
+
+var selected_non_prime_outgoing_reddit = []
+
+var selected_non_prime_ingoing_reddit = []
+
+var selected_edges_outgoing_reddit = []
+
+var selected_edges_ingoing_reddit = []
 
 function findOutgoingEdgesAndNodes(node, graph_renderer) {
     var edges = graph_renderer.edge_renderer.data_source.data

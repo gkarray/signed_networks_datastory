@@ -52,26 +52,56 @@ body, html {
 
 <!-- About Container -->
 <div class="w3-container" id="about">
-  <div class="w3-content" style="max-width:700px">
-    <h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">SIGNED SOCIAL NETWORK</span></h2>
+  <div class="w3-content" style="max-width:700px; display:flex; flex-direction: column;justify-content: center; align-items: center;">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">SIGNED SOCIAL NETWORK</span></h5>
 
     <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">INTRODUCTION</span></h3>
+
+    <p>Signed Networks in Social Media presents a study on how well can the theories of balance and the theory of status predict the relationships between INDIVIDUAL users on social networks.</p>
+
+    <p>We propose to study how these theories can explain the relationships between COMMUNITIES, and the "online social networks" they represent.</p>
+
+    <p>To do this we will investigate the Reddit Hyperlink Network dataset.</p>
+
+    <p>In Reddit, a sub-reddit can be seen as a community, where individual users "subscribe" to a subreddit and become "affiliated" to it, by being active and posting.</p>
+
+    <p>And sometimes, some posts in a sub-reddit can contain hyperlinks to other an sub-reddit, either to "neutrally" evoque it, "praise" it or "insult" it.</p>
+
+    <p>We say a hyperlink originates from a post in the source community and links to a post in the target community.</p>
+
+    <p>We will study how well can the analyses made for individual users can be made on communities.</p>
     
     <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">RESEARCH QUESTIONS</span></h3>
 
+    <p><b>RQ1:</b>How effective are the two theories (balance and status) in explaining/predicting the relationship (i.e sign of edges) between communities ?</p>
+
+    <p><b>RQ2: </b>What are the differences and similarities between communities and individual relationships ?</p>
+
+    <p><b>RQ3: </b>Can vizualization help us in spotting differences and similarities ?</p>
+
     <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">METHODS</span></h3>
+
+    <p>In our implementation of models of balance and status theory, we relied on the methodology followed in <i>Jure Leskovec, Daniel Huttenlocher, and Jon Kleinberg. 2010. Signed networks in social media.</i></p>
+
+    <p>To deal with multiple signed (-/+ 1) edges between same two nodes in Reddit dataset, we implemented two methods, to transform it into a regular <b>Directed Graph</b>: One takes into account every edge and create a MultiDirGraph, whilst the other assign a single edge with a computed mean of all weights between those two nodes.</p>
 
     <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">RESULTS</span></h3>
 
-    <h1 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WIKIPEDIA</span></h5>
+    <h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WIKIPEDIA</span></h2>
 
     <img src="https://gkarray.github.io/signed_networks_datastory/figure2-wikipedia.JPG"/>
-
-    <h1 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">REDDIT</span></h5>
+    
+    <h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">REDDIT</span></h2>
 
     <img src="https://gkarray.github.io/signed_networks_datastory/figure2-reddit.JPG"/>
 
     <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">ANALYSIS</span></h3>
+
+    <p>Unlike the Wikipedia dataset where prediction of status with respect to both generative and receptive surprise perform much better against data than predictions of structural balance.</p>
+
+    <p>In the case of the Reddit dataset we find that status and balance theories fail to get the right predictions with respect to both generative and receptive surprise.
+
+    <p>The results of the two thoeries are quite similar and there is no reason to conclude that it is significant. Indeed, status and balance are consistent with generative surprise for only 8 of the 16 types of c-links, and consistent with receptive surprise for only 8 of 16.
 
   </div>
 </div>

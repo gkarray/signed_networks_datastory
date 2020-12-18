@@ -41,12 +41,12 @@ body, html {
         function (data_wiki) {
             Bokeh.embed.embed_item(data_wiki)
 
-    //         $.getJSON(
-    //             "https://gkarray.github.io/signed_networks_datastory/embedabble_reddit_demo.json",
-    //             function (data_reddit) {
-    //                 Bokeh.embed.embed_item(data_reddit)
-    //         }
-    //   )
+            $.getJSON(
+                "https://gkarray.github.io/signed_networks_datastory/embedabble_reddit_demo.json",
+                function (data_reddit) {
+                    Bokeh.embed.embed_item(data_reddit)
+            }
+      )
         }
       )
   </script>
@@ -93,7 +93,11 @@ body, html {
 
     <p>You can press the <i>end</i> button to stop the simulation, and re-press the <i>start</i> button to begin again.</p>
 
-    <p>The edges appear and stick little by little</p>
+    <p>The edges appear and stick little by little.</p>
+
+    <p>This is performed in an effort to spot some differences or similarities that pop between Wikipedia's network and Reddit's network.</p>
+
+    <p><i><b>Remark :</b> Upon clicking the start button, it can take a little time for the simulation to start. This is because there some computation happening only one time at the start to smoothen things out in the simulation !</i></p>
   </div>
 </div>
 

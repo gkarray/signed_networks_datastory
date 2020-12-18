@@ -38,6 +38,8 @@ function findOutgoingEdgesAndNodes(node, graph_renderer) {
         return a;
     }, [[], new Set()]); 
 
+    console.log(tab_res)
+
     return tab_res
 }
 
@@ -52,6 +54,8 @@ function findIngoingEdgesAndNodes(node, graph_renderer) {
         }
         return a;
     }, [[], new Set()]); 
+
+    console.log(tab_res)
 
     return tab_res
 }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<title>Signed Networks Datastory</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.js" integrity="sha384-T2yuo9Oe71Cz/I4X9Ac5+gpEa5a8PpJCDlqKYO0CfAuEszu1JrXLl8YugMqYe3sM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.3.min.js" integrity="sha384-98GDGJ0kOMCUMUePhksaQ/GYgB3+NH9h996V88sh3aOiUNX3N+fLXAtry6xctSZ6" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link href="picker.css" rel="stylesheet">
+<script src="picker.js"></script>
+
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/coffeehouse.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"
+  ></script>
+  <script>
+    $.getJSON(
+      "https://gkarray.github.io/signed_networks_datastory/embedabble_wikipedia_picker.json",
+      function (data_wiki) {
+          Bokeh.embed.embed_item(data_wiki)
+
+  //         $.getJSON(
+  //             "https://gkarray.github.io/signed_networks_datastory/embedabble_reddit_picker.json",
+  //             function (data_reddit) {
+  //                 Bokeh.embed.embed_item(data_reddit)
+  //         }
+  //   )
+      }
+    )
+</script>
+
+
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+ <div class="w3-row w3-padding w3-black">
+   <div class="w3-col s4">
+     <a href="https://gkarray.github.io/signed_networks_datastory/index.html" class="w3-button w3-block w3-black">HOME</a>
+   </div>
+   <div class="w3-col s4">
+     <a href="https://gkarray.github.io/signed_networks_datastory/demo.html" class="w3-button w3-block w3-black">DEMO</a>
+   </div>
+   <div class="w3-col s4">
+     <a href="https://gkarray.github.io/signed_networks_datastory/picker.html" class="w3-button w3-block w3-black">PICKER</a>
+   </div>
+ </div>
+</div>
+
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+
+  <div class="w3-content" style="max-width:700px">
+    <h2 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE PICKER</span></h2>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu" style="display: flex; flex-direction: column; align-items: center;">
+ <div class="graph-container w3-content" style="max-width:700px; margin-bottom: 40px">
+ 
+    <h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE PICKER</span></h2>
+
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WIKIPEDIA</span></h5>
+
+    <div class="wikipedia-plot" id="wikipedia-plot"></div>
+
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">REDDIT</span></h5>
+
+    <div class="reddit-plot" id="reddit-plot"></div>
+
+ </div>
+
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+</body>
+</html>

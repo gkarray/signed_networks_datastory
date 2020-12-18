@@ -4,6 +4,10 @@ var simulation_in_progress = false
 
 var nb_clicks = 0
 
+var edges_dict = null
+
+var nodes_dict = null
+
 var dates_arr = [
     "2004/03/28",
     "2004/03/29",

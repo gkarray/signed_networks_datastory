@@ -3,11 +3,11 @@
 <title>Signed Networks Datastory</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://cdn.bokeh.org/bokeh/release/bokeh-1.4.0.min.js"
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.1.0.min.js"
         crossorigin="anonymous"></script>
-<script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-1.4.0.min.js"
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.1.0.min.js"
         crossorigin="anonymous"></script>
-<script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-1.4.0.min.js"
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.1.0.min.js"
         crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
@@ -31,22 +31,18 @@ body, html {
   display: none;
 }
 </style>
-<script src="https://d3js.org/d3.v4.js"></script>
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"
   ></script>
-  <script src="graph.js"></script>
   <script>
-    $(window).load(function () {
-      $.getJSON(
+            $.get(
         "https://gkarray.github.io/signed_networks_datastory/embedabble_demo.json",
         function (data) {
             Bokeh.embed.embed_item(data)
         }
       )
-    })
   </script>
 <!-- <script src="https://gkarray.github.io/signed_networks_datastory/graph.js"></script> -->
 
